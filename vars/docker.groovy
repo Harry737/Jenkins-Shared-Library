@@ -1,3 +1,3 @@
-def call(String user,String application,String version){
-  sh "docker build -t ${user}/${application}:${version} ."
+def call(Map params){
+  sh "docker build -t ${params.user}/${params.application}:${params.version} ."
 }
